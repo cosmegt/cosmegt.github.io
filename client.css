@@ -1,12 +1,41 @@
 /**
  * Clinet.css
  * Where all things styles go
+ **                 Coral       Light Blue      Dark Blue
+ ** Color theme     #F25CA2     #0B9ED9         #021859
 */
 /* Imports go here */
-
-/* Globals */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Playfair+Display&display=swap');
+/* Globals and elements */
 :root{
 
 }
+body{
 
-/* Everything else probably as I program, non intention :) sowwy*/
+}
+
+/* Components, containers and their child clases */
+.navbar{
+    width: 80%;
+    height: 150px;
+    position: absolute;
+    top: 20px;
+    left: 10%;
+}
+.navbar div{
+    display: inline-block;
+    font-size: 200%;
+    position: relative;
+    width: 19%;
+    text-align: center;
+}
+
+/* Singles*/
+
+.title{
+    font-family: 'Playfair Display', serif;
+}
+
+.myname{
+    font-size: 250% !important;
+}
