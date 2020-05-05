@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Playfair+Display&display=swap');
 /* Globals and elements */
 :root{
-
+    --coral: #F25CA2;
 }
 body{
 
