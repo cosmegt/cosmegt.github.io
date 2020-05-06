@@ -5,12 +5,14 @@
  ** Color theme     #F25CA2     #0B9ED9         #021859
 */
 /* Imports go here */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli&family=Playfair+Display:wght@400;900&display=swap');
 /* Globals and elements */
 :root{
-    --coral: #F25CA2;
-    --light-blue: #0B9ED9;
-    --dark-blue: #021859;
+    --slate: #393f5f;
+    --slate-gradient: linear-gradient(90deg, rgba(69,89,195,1) 0%, rgba(41,70,228,1) 100%);
+    --olive: #6a7e6a;
+    --playfair: "Playfair Display", serif;
+    --multi: 'Muli', sans-serif;
 }
 body{
 
@@ -30,12 +32,18 @@ body{
     position: relative;
     width: 19%;
     text-align: center;
+    font-family: var(--multi);
+    color: var(--slate);
 }
 
 /* Singles*/
 
 .title{
-    font-family: 'Playfair Display', serif;
+    font-family: var(--playfair) !important;
+    background: var(--olive);
+    /* color: var(--green) !important; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .myname{
