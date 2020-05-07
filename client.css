@@ -1,10 +1,8 @@
-/**
+/*
  * Clinet.css
  * Where all things styles go
- **                 Coral       Light Blue      Dark Blue
- ** Color theme     #F25CA2     #0B9ED9         #021859
 */
-/* Imports go here */
+/* imports go here */
 @import url('https://fonts.googleapis.com/css2?family=Muli&family=Playfair+Display:wght@400;900&display=swap');
 /* Globals and elements */
 :root{
@@ -14,15 +12,12 @@
     --playfair: "Playfair Display", serif;
     --multi: 'Muli', sans-serif;
 }
-body{
-
-}
 
 /* Components, containers and their child clases */
 .navbar{
     width: 80%;
     height: 150px;
-    position: absolute;
+    position: relative;
     top: 20px;
     left: 10%;
 }
@@ -36,14 +31,36 @@ body{
     color: var(--slate);
 }
 
+.content{
+    position: relative;
+    width: 80%;
+    top: 30px;
+    left: 15%;
+}
+
+.col-2{
+    position: relative;
+    display: inline-block;
+    top: 0;
+    width: 48%;
+    vertical-align: top;
+}
 /* Singles*/
 
 .title{
     font-family: var(--playfair) !important;
     background: var(--olive);
-    /* color: var(--green) !important; */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 200%;
+    margin-bottom: 15px;
+}
+.paragraph{
+    width: 90%;
+    font-size: 122%;
+    font-family: var(--multi);
+    text-align: justify;
+    margin-bottom: 5px;
 }
 
 .myname{
