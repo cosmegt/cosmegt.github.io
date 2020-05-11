@@ -57,7 +57,7 @@
 }
 .paragraph{
     width: 90%;
-    font-size: 122%;
+    font-size: 100%;
     font-family: var(--multi);
     text-align: justify;
     margin-bottom: 5px;
