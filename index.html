@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./client.css">
     <title>Cosme Chavez</title>
+    <script>
+        let isMe = localStorage.getItem("me");
+        if(!isMe){
+            window.alert("Website under construction. You Will Be Redirected");
+            window.location = "https://www.linkedin.com/in/cosmechavez/";
+        }
+    </script>
 </head>
 <body>
     <div class="navbar">
@@ -67,9 +74,17 @@
 
         </div>
 		<div class="works container">
-            <div class="title middle">Works</div>
+            <div class="title">Works</div>
             <div class="museum">
-				
+				<div class="frame">
+
+                </div>
+				<div class="frame">
+
+                </div>
+				<div class="frame">
+                    
+                </div>
             </div>
 		</div>
     </div>
