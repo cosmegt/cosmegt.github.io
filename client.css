@@ -1,5 +1,5 @@
 /*
- * Clinet.css
+ * client.css
  * Where all things styles go
 */
 /* imports go here */
@@ -9,6 +9,8 @@
     --playfair: "Playfair Display", serif;
     --multi: 'Muli', sans-serif;
 }
+
+/* Sections */
 
 .canvas {
     position: absolute;
@@ -28,8 +30,39 @@
 
 .page .section{
     position: relative;
-    height: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+/* Grid */
+.box{
     top: 0;
     left: 0;
-    margin: 15%;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 2%;
+}
+
+/* Text formats */
+
+.big{
+    font-family: var(--playfair);
+    font-size: 14em;
+    overflow: hidden;
+}
+
+.sidetext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    font-family: var(--playfair);
+    font-size: 5em;
 }

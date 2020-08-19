@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosme Chavez</title>
-    <link rel="stylesheet" href="./client.css">
+    <link rel="stylesheet" href="./client.css" rel="preload">
 </head>
 <body>
 
@@ -24,7 +24,16 @@
 <!-- Canvas will be devided into the sections defined above -->
 
     <div class="page"> <!-- Hello -->
-        
+        <div class="section grid-2"> <!-- this is where the title goes-->
+            <div class="box a">
+                <div class="big blur">Cosme Chavez</div>
+            </div>
+            <div class="box b">
+                <div class="sidetext blur">
+                    A tech wizard.
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -42,4 +51,6 @@
 </div> <!-- end of canvas ;)-->
 
 </body>
+    <script src="./libs/anime.min.js"></script>
+    <script src="./client.js"></script>
 </html>
