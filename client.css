@@ -9,6 +9,9 @@
     --playfair: "Playfair Display", serif;
     --multi: 'Muli', sans-serif;
 }
+a{
+    color: #DF948A;
+}
 
 /* Sections */
 
@@ -60,19 +63,14 @@ footer{
     display: grid;
     grid-template-columns: 48% 48%;
     grid-gap: 2%;
+    grid-auto-rows: auto;
 }
 .col-3{
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-gap: 2%;
+    grid-auto-rows: auto;
 }
-
-.row-2{
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-gap: 15px;
-}
-
 /* Text formats */
 
 .big{
@@ -97,6 +95,7 @@ footer{
     font-family: var(--playfair);
     font-size: 3vw;
     font-style: italic;
+    padding-left: 15px;
 }
 
 .parragraph{
