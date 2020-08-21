@@ -12,6 +12,11 @@
 a{
     color: #DF948A;
 }
+footer{
+    width: 100%;
+    height: 80px;
+    display: inline-block;
+}
 
 /* Sections */
 
@@ -38,11 +43,32 @@ a{
     margin-top: 5%;
 }
 
-footer{
-    width: 100%;
-    height: 80px;
-    display: inline-block;
+/* Menu button style */
+
+.button{
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    text-align: center;
+    border: .1rem solid black;
+    border-radius: 5% 20% 5%;
+    z-index: 5;
+    transition: 50ms;
+    padding: 3%;
 }
+.button i{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw
+}
+.button:hover{
+    border-radius: 20% 5% 20%;
+    cursor: pointer;
+}
+
 
 /* Section aesthetics */
 .dark{
