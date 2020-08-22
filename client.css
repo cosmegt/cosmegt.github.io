@@ -174,5 +174,14 @@ footer{
         top: 0;
         left: 0;
         margin-right: 0;
+        font-size: 4em;
+    }
+}
+@media screen and (max-width: 840px){
+    .big{
+        font-size: 5em;
+    }
+    .medium{
+        font-size: 4em;
     }
 }
