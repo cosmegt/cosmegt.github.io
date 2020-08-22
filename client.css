@@ -10,7 +10,7 @@
     --multi: 'Muli', sans-serif;
 }
 a{
-    color: #DF948A;
+    color: #eb5642;
 }
 footer{
     width: 100%;
@@ -69,6 +69,17 @@ footer{
     cursor: pointer;
 }
 
+/* Menu Styles */
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
 
 /* Section aesthetics */
 .dark{
@@ -103,6 +114,18 @@ footer{
     font-family: var(--playfair);
     font-size: 12vw;
     overflow: hidden;
+}
+.medium{
+    font-family: var(--playfair);
+    font-size: 8vw;
+    overflow: hidden;
+}
+.small{
+    font-family: var(--multi);
+    font-size: 1vw;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .sidetext{
