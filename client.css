@@ -1,79 +1,187 @@
 /*
- * Clinet.css
+ * client.css
  * Where all things styles go
 */
 /* imports go here */
-@import url('https://fonts.googleapis.com/css2?family=Muli&family=Playfair+Display:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli&family=Playfair+Display:ital,wght@0,400;1,500&display=swap');
 /* Globals and elements */
 :root{
-    --slate: #393f5f;
-    --slate-gradient: linear-gradient(90deg, rgba(69,89,195,1) 0%, rgba(41,70,228,1) 100%);
-    --olive: #6a7e6a;
     --playfair: "Playfair Display", serif;
     --multi: 'Muli', sans-serif;
 }
-
-/* Components, containers and their child clases */
-.navbar{
-    width: 80%;
-    height: 150px;
-    position: relative;
-    top: 20px;
-    left: 10%;
+a{
+    color: #eb5642;
 }
-.navbar div{
+footer{
+    width: 100%;
+    height: 80px;
     display: inline-block;
-    font-size: 200%;
+}
+
+/* Sections */
+
+.canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.page .section{
     position: relative;
-    width: 19%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+/* Menu button style */
+
+.button{
+    position: fixed;
+    top: 5%;
+    right: 5%;
     text-align: center;
-    font-family: var(--multi);
-    color: var(--slate);
+    border: .1rem solid black;
+    border-radius: 5% 20% 5%;
+    z-index: 5;
+    transition: 50ms;
+    padding: 3rem;
+}
+.button i{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+.button:hover{
+    border-radius: 20% 5% 20%;
+    cursor: pointer;
 }
 
-.container{
-    margin-top: 30px;
-    margin-bottom: 50px;
+/* Menu Styles */
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
 }
 
-.content{
-    position: relative;
-    width: 80%;
-    top: 30px;
-    left: 15%;
+
+/* Section aesthetics */
+.dark{
+    background-color: black;
+    color: white;
+}
+
+/* Grid */
+.box{
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
 }
 
 .col-2{
-    position: relative;
-    display: inline-block;
-    top: 0;
-    width: 48%;
-    vertical-align: top;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 2%;
+    grid-auto-rows: auto;
 }
-/* Singles*/
+.col-3{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 2%;
+    grid-auto-rows: auto;
+}
+/* Text formats */
 
-.title{
-    font-family: var(--playfair) !important;
-    background: var(--olive);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 200%;
-    margin-bottom: 15px;
+.big{
+    font-family: var(--playfair);
+    font-size: 12em;
+    overflow: hidden;
 }
-.paragraph{
-    width: 90%;
-    font-size: 100%;
+.medium{
+    font-family: var(--playfair);
+    font-size: 8em;
+    overflow: hidden;
+}
+.small{
     font-family: var(--multi);
-    text-align: justify;
+    font-size: 2em;
+    overflow: hidden;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
-.myname{
-    font-size: 250% !important;
+.sidetext{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    font-family: var(--playfair);
+    font-style: italic;
+    font-size: 6em;
 }
 
-.middle{
+.subtitle{
     position: relative;
-    left: 40%;
-    display: inline-block;
+    top: 5%;
+    font-family: var(--playfair);
+    font-size: 3em;
+    font-style: italic;
+    padding-left: 15px;
+}
+
+.parragraph{
+    position: relative;
+    margin: 2vw;
+    font-size: 2rem;
+}
+
+/* Responsive Changes */
+
+/* Laptop */
+@media screen and (max-width: 1640px) {
+    .big {
+        font-size: 10em;
+    }
+    .col-2{
+        display: inline-block;
+    }
+    .col-3{
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 1290px) {
+    .sidetext{
+        position: inherit;
+        top: 0;
+        left: 0;
+        margin-right: 0;
+        font-size: 4em;
+    }
+}
+@media screen and (max-width: 840px){
+    .big{
+        font-size: 5em;
+    }
+    .medium{
+        font-size: 4em;
+    }
 }

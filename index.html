@@ -3,89 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./client.css">
     <title>Cosme Chavez</title>
-    <script>
-        let isMe = localStorage.getItem("me");
-        if(!isMe){
-            window.location = "https://www.linkedin.com/in/cosmechavez/";
-        }
-    </script>
+    <link rel="stylesheet" href="./client.css" rel="preload">
 </head>
 <body>
-    <div class="navbar">
-        <div class="bio">
-            Bio
+
+    <!-- Organization - 
+    * * Menu... I think i want the menu to be light related...
+        > Hello! - Reach out - Projects
+    * * Hello!
+        > Cosme Chavez
+        > I'm...
+        > My Passion
+        > My Interests
+        > Experience
+    * * Reach out
+        > Email - IG - Linkedin - github
+    -->
+<div class="canvas">
+<!-- Canvas will be devided into the sections defined above -->
+    <!-- <div class="button">
+        <i>Menu</i>
+    </div> -->
+
+
+    <div class="page"> <!-- Hello -->
+
+        <div class="section col-2">
+            <div class="box">
+                <div class="big">
+                    Co<i>s</i>me <i>C</i>have<i>z</i>
+                </div>
+            </div>
+            <div class="box">
+                <div class="sidetext">
+                    A tech wizard.
+                </div>
+            </div>
+            <div class="box small" style="grid-area: 2 / 2 / 2 / 2">
+                <div class="section col-2">
+                    <div class="box">email</div>        <div class="box"> <a href="mailto:mail@cosmechavez.dev">mail@cosmechavez.dev</a> </div>
+                    <div class="box">linkedin</div>     <div class="box"> <a href="https://linkedin.com/in/cosmechavez">in/cosmechavez</a> </div>
+                    <div class="box">github</div>       <div class="box"> <a href="https://github.com/cosmegt">cosmegt</a> </div>
+                </div>
+            </div>
         </div>
-        <div class="works">
-            Works
+
+        <!-- About Me -->
+        <div class="section col-3">
+
+            <div class="box" style="grid-area: 1 / 3 / 1 / 3">
+                <div class="subtitle dark">
+                    About Me
+                </div>
+            </div>
+            <div class="box" style="grid-area:2 / 1 / 3 / 3;">
+                <div class="parragraph">
+                    I'm a developer, with expertise in technical support, networking, and system administration. 
+                    I live in San Diego, CA. I'm a <a href="https://en.wikipedia.org/wiki/Xalapa">Xalapa</a> native. I take effort and <i>pride</i> in my work; 
+                    there is a beauty in everything we do. I make my work a part of my <i>identity</i>.
+                </div>
+                <div class="parragraph">
+                    I have been lucky to work on projects at organizations that exist to make a <i>positive</i> impact. While at the same time I work on the side
+                    as an all-round technical support specialist in my local community. 
+                </div>
+                <div class="parragraph">
+                    Within my community I have been able to help great people and their businesses. I have built a reputation of accomplishment for myself 
+                    based on the belief that I can achieve anything.  
+                </div>
+            </div>
+
+            <div class="box" style="grid-area: 2 / 3 / 2 / 3">
+                <!-- An image will come here probably... -->
+            </div>
+            
+            <!-- Interests -->
+            <!-- <div class="box" style="grid-area: 3 / 3 / 3 / 3">
+                <div class="subtitle dark">
+                    Interests
+                </div>
+            </div>
+            <div class="box" style="grid-area: 4 / 1 / 4 / 1">
+                <div class="subtitle">
+                    Development
+                </div>
+            </div>
+            <div class="box" style="grid-area: 5 / 1 / 5 / 3">
+                <div class="parragraph">
+                    Development blah blah blah....
+                </div>
+            </div>
+            <div class="box" style="grid-area: 6 / 1 / 6 / 1">
+                <div class="subtitle">
+                    Hacking
+                </div>
+            </div>
+            <div class="box" style="grid-area: 7 / 1 / 7 / 3">
+                <div class="parragraph">
+                    Hacking blah blah blah....
+                </div>
+            </div>
+            <div class="box" style="grid-area: 4 / 1 / 4 / 1">
+                <div class="subtitle">
+                    Art
+                </div>
+            </div> -->
+
+            <!-- Curriculum -->
+            <!-- <div class="box" style="grid-area: 3 / 3 / 3 / 3">
+                <div class="subtitle dark">
+                    Curriculum Vitae
+                </div>
+            </div>
+
+            <div class="box" style="grid-area: 4 / 1 / 4 / 3">
+                <div class="parragraph">
+                    Freelance Technical Support Specialist
+                </div>
+                <div class="parragraph">
+                    AVID Center ~ <i>Intern as Web Developer</i>
+                </div>
+                <div class="parragraph">
+                    GUHSD ~ <i>Senior Full Stack Web Developer</i>
+                </div>
+                <div class="parragraph">
+                    SoCal CyberCup ~ <i>Coach & Comptetitor</i>
+                </div>
+            </div>
+
+            <div class="box" style="grid-area: 4 / 3 / 4 / 3">
+                <div class="parragraph">
+                    <i>4 years</i> (2016 - Current)
+                </div>
+                <div class="parragraph">
+                    <i>8 months</i> (2019 - 2020)
+                </div>
+                <div class="parragraph">
+                    <i>2 years</i> (2018 - 2020)
+                </div>
+                <div class="parragraph">
+                    <i>3 years</i> (2017 - 2020)
+                </div>
+            </div>  -->
         </div>
-        <div class="myname title">
-            Cosme Chavez
-        </div>
-        <div class="contact">
-            Contact
-        </div>
-        <div class="contact">
-            Et Cetera
-        </div>
+
+    <footer></footer>
     </div>
-
-    <div class="content">
-        <div class="bio container">
-            <div class="col-2">
-                <!-- Image of me should go here?
-                    Should I use a placement image in the meantime?
-                    Sure, why not
-                -->
-                <img src="https://via.placeholder.com/500x800?text=Cosme+Chavez+profile">
-            </div>
-            <div class="col-2">
-                <div class="title">Bio</div>
-                <div class="paragraph">
-                    My name is Cosme Chavez. I am an independent software developer with over 4 years of experience, based in San Diego, California.
+    
+    <!--Menu -->
+    <!-- <div class="page"> 
+        <div class="menu">
+            <div class="section">
+                <div class="box">
+                    <div class="medium"><a>Home</a></div>
                 </div>
-                <div class="paragraph">
-                    I migrated from Xalapa, Ver, Mexico in 2013. When I moved to America, I saw a pinnacle of opportunity. A one-year long transition that let
-                    me think about my passions and the things that matter in my present and future life.
-                    I couldn't see myself working a mindless job from 9:00 A.M. to 6:00 P.M. That idea made me feel sick; I wanted to do something,
-                    build something, create something. I was so ambitious, I couldn't sleep, drink or eat. I entered a drepression from not knowing
-                    what my life was about. I had to do something about it. It took me nights, days, weeks and months to find my identity, for what I
-                    wanted to be. I filled my life with art, philosophy, music and other disiplines, to help me cope with that emptiness. I kept searching for a
-                    conclusion to my conundrum, but found myself hopeless, until I touched programming. Then I had realized; this is my life.
-                    I knew I had developed an interest for computers at an early age from looking at my step-father work with computers, watching him struggle throught a problem
-                    facinated me, I was maybe nine or ten years old, yet I knew, that the stuff fasinated me, I just did not know how much.
-                    I digged into the subject, and so little did I know, I had so much left to learn (I still do.) Not just programming, but I progressed my own path into computing
-                    and computer science. I learned about networking, cyber-security, software development, I learned languages, technologies, anything I could, and I practiced
-                    like a maniac. Not because I thought it would make me lots of money, rather the pure persuit of knowledge, to fulthfill my human nature, my curiousity, my passion.
-                    This passion lead me to teach myself, and pratice my skills that eventually lead into my career. I saw the world of computing and engineering differently; 
-                    I did not see it as a job. Computing was more than that: it was my art, it was my will, a part of my soul.
+                <div class="box">
+                    <div class="medium"><a>About</a></div>
                 </div>
-                <div class="paragraph">
-                    I saw my ability to create software as a method of expression, an escape, but especially, a method to 
-                    create something unique. I take pride of my work, I believe that my effort has to be meaningful, regardless
-                    of how small or big my operation is. I have to make something that signes my signature, otherwise it is not worth it.
+                <div class="box">
+                    <div class="medium"><a>Projects</a></div>
                 </div>
-                <div class="paragrapth">
-                    
+                <div class="box">
+                    <div class="medium"><a>Reach out</a></div>
                 </div>
             </div>
-
         </div>
-		<div class="works container">
-            <div class="title">Works</div>
-            <div class="museum">
-				<div class="frame">
+    </div> -->
 
-                </div>
-				<div class="frame">
+</div>
 
-                </div>
-				<div class="frame">
-                    
-                </div>
-            </div>
-		</div>
-    </div>
 </body>
+    <script src="./libs/anime.min.js"></script>
+    <script src="./client.js"></script>
 </html>
