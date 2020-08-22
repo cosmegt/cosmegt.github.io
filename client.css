@@ -112,17 +112,17 @@ footer{
 
 .big{
     font-family: var(--playfair);
-    font-size: 12vw;
+    font-size: 12em;
     overflow: hidden;
 }
 .medium{
     font-family: var(--playfair);
-    font-size: 8vw;
+    font-size: 8em;
     overflow: hidden;
 }
 .small{
     font-family: var(--multi);
-    font-size: 1vw;
+    font-size: 2em;
     overflow: hidden;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -135,14 +135,14 @@ footer{
     margin-right: -50%;
     font-family: var(--playfair);
     font-style: italic;
-    font-size: 6vw;
+    font-size: 6em;
 }
 
 .subtitle{
     position: relative;
     top: 5%;
     font-family: var(--playfair);
-    font-size: 3vw;
+    font-size: 3em;
     font-style: italic;
     padding-left: 15px;
 }
@@ -150,5 +150,5 @@ footer{
 .parragraph{
     position: relative;
     margin: 2vw;
-    font-size: 2vw;
+    font-size: 2rem;
 }
