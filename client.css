@@ -54,7 +54,7 @@ footer{
     border-radius: 5% 20% 5%;
     z-index: 5;
     transition: 50ms;
-    padding: 3%;
+    padding: 3rem;
 }
 .button i{
     margin: 0;
@@ -62,7 +62,7 @@ footer{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2vw
+    font-size: 2rem;
 }
 .button:hover{
     border-radius: 20% 5% 20%;
@@ -151,4 +151,28 @@ footer{
     position: relative;
     margin: 2vw;
     font-size: 2rem;
+}
+
+/* Responsive Changes */
+
+/* Laptop */
+@media screen and (max-width: 1640px) {
+    .big {
+        font-size: 10em;
+    }
+    .col-2{
+        display: inline-block;
+    }
+    .col-3{
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 1290px) {
+    .sidetext{
+        position: inherit;
+        top: 0;
+        left: 0;
+        margin-right: 0;
+    }
 }
