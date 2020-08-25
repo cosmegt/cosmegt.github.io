@@ -20,6 +20,13 @@ footer{
     height: 80px;
     display: inline-block;
 }
+img {
+    display: block;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: auto;
+    width: 50%;
+}
 
 /* Sections */
 
@@ -46,34 +53,26 @@ footer{
     margin-top: 5%;
 }
 
-img {
-    display: block;
-    margin-top: 5%;
-    margin-left: 15%;
-    margin-right: auto;
-    width: 50%;
-  }
+.topbar{
+    position: fixed;
+    top: 5%;
+    left: 35px;
+    right: 35px;
+    height: 80px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    grid-gap: 5px;
+    font-size: calc(1vw + 1rem);
+    font-family: var(--playfair)
+}
+
 
 /* Menu button style */
 
 .button{
-    position: fixed;
-    top: 5%;
-    right: 5%;
-    text-align: center;
-    border: .1rem solid black;
-    border-radius: 50%;
     z-index: 5;
     transition: 50ms;
-    padding: 3rem;
-}
-.button i{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
 }
 .button:hover{
     border-radius: 20% 5% 20%;
@@ -89,6 +88,7 @@ img {
     height: 100%;
     background-color: black;
     color: white;
+    z-index: 12;
 }
 
 
@@ -141,7 +141,7 @@ img {
 
 .sidetext{
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     margin-right: -50%;
     font-family: var(--playfair);
@@ -171,21 +171,17 @@ img {
     .big {
         font-size: 10em;
     }
-    .col-2{
-        display: inline-block;
-    }
-    .col-3{
-        display: inline-block;
+    .sidetext{
+        font-size: 5em;
     }
 }
 
 @media screen and (max-width: 1290px) {
+    .big{
+        font-size: 6em;
+    }
     .sidetext{
-        position: inherit;
-        top: 0;
-        left: 0;
-        margin-right: 0;
-        font-size: 4em;
+        font-size: 3em;
     }
 }
 @media screen and (max-width: 840px){
@@ -193,9 +189,31 @@ img {
         font-size: 5em;
     }
     .medium{
-        font-size: 4em;
+        font-size: 2em;
     }
     .small{
         font-size: 1.3em;
+    }
+    .col-2{
+        display: inline-block;
+    }
+    .col-3{
+        display: inline-block;
+    }
+    .sidetext{
+        position: inherit;
+        top: 0;
+        left: 0;
+        margin-right: 0;
+    }
+    .topbar{
+        top: 3%;
+        grid-template-columns: 30% 45% 30%;
+    }
+}
+
+@media screen and (max-width: 735px){
+    .button i{
+        font-size: 1.3em
     }
 }
