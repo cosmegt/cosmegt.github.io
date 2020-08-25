@@ -72,10 +72,8 @@ img {
 
 .button{
     z-index: 5;
-    transition: 50ms;
 }
 .button:hover{
-    border-radius: 20% 5% 20%;
     cursor: pointer;
 }
 
