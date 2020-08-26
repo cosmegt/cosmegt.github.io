@@ -36,6 +36,7 @@ img {
     height: 100%;
     top: 0;
     left: 0;
+    overflow: hidden;
 }
 
 .page{
@@ -162,12 +163,26 @@ img {
     font-size: 2rem;
 }
 
+.char{
+    display: inline-block;
+    transform: rotateY(90deg);
+}
+
+
+/* Animations */
+#title span{
+    opacity: 0;
+}
+
 /* Responsive Changes */
 
 /* Laptop */
 @media screen and (max-width: 1640px) {
     .big {
         font-size: 10em;
+    }
+    .medium{
+        font-size: 6em;
     }
     .sidetext{
         font-size: 5em;
@@ -177,6 +192,9 @@ img {
 @media screen and (max-width: 1290px) {
     .big{
         font-size: 6em;
+    }
+    .medium{
+        font-size: 4em;
     }
     .sidetext{
         font-size: 3em;
