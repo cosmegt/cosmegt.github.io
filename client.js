@@ -11,14 +11,47 @@ function ready(callback){
 
 // Start
 ready(function(){
-    elementSlideIn("#watermark");
-    // elementSlideIn("#menu_button");
+    document.getElementById("open").addEventListener("click", openMenu, false);
+    openHome();
+
+});
+
+function openHome(){
+    elementsSlideIn("#watermark");
     
     elementAppear("#side_text");
     textAppear("#my_name");
     
-    elementsSlideUp("#links .box")
-});
+    elementsSlideUp("#links .box");
+}
+
+function openMenu(){
+    document.getElementById("open").removeEventListener("click", openMenu, false);
+    let animation = anime.timeline({loop:false})
+        .add({
+            targets: "#menu_page",
+            opacity: [0,1],
+            duration: 100,
+            easing: "linear",
+            complete: function() {
+                elementsSlideIn(".menu_item");
+            }
+        })
+    document.getElementById("close").addEventListener("click", closeMenu, false)
+}
+
+function closeMenu(){
+    document.getElementById("close").removeEventListener("click", closeMenu, false);
+    elementsSlideOut(".menu_item",
+        anime({
+            targets: "#menu_page",
+            opacity: [1,0],
+            duration: 500,
+            easing: "linear"
+        })
+    )
+    document.getElementById("open").addEventListener("click", openMenu, false)
+}
 
 function textAppear(id /*Must be string*/, callback){ 
     let wrapper = document.querySelector(id);
@@ -32,11 +65,12 @@ function textAppear(id /*Must be string*/, callback){
             rotateY: [-90, 0],
             rotateX: [90,0],
             easing: "easeInOutQuad",
-            duration: 500,
-            delay: (el, i) => 50 * (i+1)
+            duration: 1000,
+            delay: (el, i) => 50 * (i+1),
+            complete: function() {
+                callback
+            }
         });
-
-    animation.finished.then(callback)
 }
 
 function elementAppear(id /*Must be string*/, callback){
@@ -48,14 +82,15 @@ function elementAppear(id /*Must be string*/, callback){
             rotateX: [-90,0],
             rotateY: [10, 0],
             easing: "easeInOutQuad",
-            duration: 800
+            duration: 900,
+            complete: function() {
+                callback
+            }
         });
-    
-    animation.finished.then(callback)
 }
 
-function elementSlideIn(id, callback){
-    el = document.querySelector(id);
+function elementsSlideIn(id, callback){
+    el = document.querySelectorAll(id);
 
     let animation = anime.timeline({loop: false})
         .add({
@@ -63,10 +98,29 @@ function elementSlideIn(id, callback){
             opacity: [0,1],
             translateX: [-50, 0],
             easing: "easeInOutQuad",
-            duration: 500
+            duration: 800,
+            delay: (elements, i) => 50 * (i+1),
+            complete: function() {
+                callback
+            }
         });
+}
 
-    animation.finished.then(callback)
+function elementsSlideOut(id, callback){
+    el = document.querySelectorAll(id);
+
+    let animation = anime.timeline({loop: false})
+        .add({
+            targets: el,
+            opacity: [1,0],
+            translateX: [0, -50],
+            easing: "easeInOutQuad",
+            duration: 800,
+            delay: (elements, i) => 50 * (i+1),
+            complete: function() {
+                callback
+            }
+        });
 }
 
 function elementsSlideUp(elements, callback){
@@ -78,8 +132,9 @@ function elementsSlideUp(elements, callback){
             translateY: [-50, 0],
             easing: "easeInOutQuad",
             duration: 200,
-            delay: (elements, i) => 50 * (i+1)
+            delay: (elements, i) => 50 * (i+1),
+            complete: function() {
+                callback
+            }
         });
-
-    animation.finished.then(callback)
 }

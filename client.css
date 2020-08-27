@@ -8,12 +8,14 @@
 :root{
     --playfair: "Playfair Display", serif;
     --multi: 'Muli', sans-serif;
+    --red-orange: #eb5642;
+    --hot-pink: #E655CE;
 }
 body{
     overflow-x: hidden;
 }
 a{
-    color: #eb5642;
+    color: var(--red-orange);
 }
 footer{
     width: 100%;
@@ -36,7 +38,7 @@ img {
     height: 100%;
     top: 0;
     left: 0;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .page{
@@ -65,20 +67,53 @@ img {
     grid-template-columns: 20% 70% 10%;
     grid-gap: 5px;
     font-size: calc(1vw + 1rem);
-    font-family: var(--playfair)
+    font-family: var(--playfair);
+    z-index: 12;
 }
 
+.topbar .box{
+    align-content: center;
+    text-align: center;
+}
 
 /* Menu button style */
 
-.button{
-    z-index: 5;
+.menu_button{
+    width: 50px;
+    height: 50px;
 }
-.button:hover{
+.menu_button .bun{
+    width: 100%;
+    height: 1px;
+    margin-top: 20%;
+    background: linear-gradient(to left, var(--red-orange) 50%, var(--hot-pink) 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+    transition: all 400ms ease-out;
+}
+.menu_button .bun:nth-child(1){
+    transition-delay: 0ms; } 
+    #menu_button_open .bun:nth-child(2){
+    transition-delay: 100ms; } 
+    #menu_button_open .bun:nth-child(3){
+    transition-delay: 300ms;
+}
+.box .menu_button:hover{ 
     cursor: pointer;
 }
+.box .menu_button:hover > .bun{
+    background-position:left bottom;
+}
+#cross-a,#cross-b{
+    transform-origin: left;
+}
+#cross-a{ transform: rotate(45deg) } 
+#cross-b { transform: rotate(-45deg) translate(-17px, 17px)}
 
 /* Menu Styles */
+#menu_page{
+    opacity: 0;
+}
 .menu{
     position: fixed;
     top: 0;
@@ -87,9 +122,24 @@ img {
     height: 100%;
     background-color: black;
     color: white;
-    z-index: 12;
+    z-index: 13;
+    font-style: var(--multi);
 }
 
+.menu_item{
+    opacity: 0;
+    background-clip: text;
+    background-image: linear-gradient(to right, #f83600 0%,#fe8c00 48%,black 48%, black 100%);;
+    background-size: 200% 100%;
+    background-position: 100%;
+    border-radius: 15px;
+    margin-left: 15px;
+}
+.menu_item:hover{
+    transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
+    background-position: 0%;
+    cursor: pointer;
+}
 
 /* Section aesthetics */
 .dark{
