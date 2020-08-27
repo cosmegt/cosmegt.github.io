@@ -33,7 +33,7 @@ function openMenu(){
             opacity: [0,1],
             duration: 100,
             easing: "linear",
-            complete: function() {
+            complete: () => {
                 elementsSlideIn(".menu_item");
             }
         })
@@ -42,18 +42,20 @@ function openMenu(){
 
 function closeMenu(){
     document.getElementById("close").removeEventListener("click", closeMenu, false);
-    elementsSlideOut(".menu_item",
-        anime({
-            targets: "#menu_page",
-            opacity: [1,0],
-            duration: 500,
-            easing: "linear"
-        })
+    elementsSlideOut(".menu_item", () => { 
+            anime({
+                targets: "#menu_page",
+                opacity: [1,0],
+                duration: 500,
+                easing: "linear"
+            })
+        }
     )
     document.getElementById("open").addEventListener("click", openMenu, false)
 }
 
 function textAppear(id /*Must be string*/, callback){ 
+    callback = (callback != undefined) ? callback : () => {return null};
     let wrapper = document.querySelector(id);
         wrapper.innerHTML = wrapper.textContent.replace(/\S/g, "<span class='char'>$&</span>");
     let el = id + " .char";
@@ -68,12 +70,13 @@ function textAppear(id /*Must be string*/, callback){
             duration: 1000,
             delay: (el, i) => 50 * (i+1),
             complete: function() {
-                callback
+                callback()
             }
         });
 }
 
 function elementAppear(id /*Must be string*/, callback){
+    callback = (callback != undefined) ? callback : () => {return null};
     el = document.querySelector(id);
     let animation = anime.timeline({loop: false})
         .add({
@@ -84,12 +87,13 @@ function elementAppear(id /*Must be string*/, callback){
             easing: "easeInOutQuad",
             duration: 900,
             complete: function() {
-                callback
+                callback()
             }
         });
 }
 
 function elementsSlideIn(id, callback){
+    callback = (callback != undefined) ? callback : () => {return null};
     el = document.querySelectorAll(id);
 
     let animation = anime.timeline({loop: false})
@@ -101,12 +105,13 @@ function elementsSlideIn(id, callback){
             duration: 800,
             delay: (elements, i) => 50 * (i+1),
             complete: function() {
-                callback
+                callback()
             }
         });
 }
 
 function elementsSlideOut(id, callback){
+    callback = (callback != undefined) ? callback : () => {return null};
     el = document.querySelectorAll(id);
 
     let animation = anime.timeline({loop: false})
@@ -118,12 +123,13 @@ function elementsSlideOut(id, callback){
             duration: 800,
             delay: (elements, i) => 50 * (i+1),
             complete: function() {
-                callback
+                callback()
             }
         });
 }
 
 function elementsSlideUp(elements, callback){
+    callback = (callback != undefined) ? callback : () => {return null};
 
     let animation = anime.timeline({loop: false})
         .add({
@@ -134,7 +140,7 @@ function elementsSlideUp(elements, callback){
             duration: 200,
             delay: (elements, i) => 50 * (i+1),
             complete: function() {
-                callback
+                callback()
             }
         });
 }
