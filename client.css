@@ -113,6 +113,7 @@ img {
 /* Menu Styles */
 #menu_page{
     opacity: 0;
+    display: none;
 }
 .menu{
     position: fixed;
