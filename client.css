@@ -250,6 +250,9 @@ img {
     .sidetext{
         font-size: 3em;
     }
+    .menu_section{
+        margin-top: 15% !important;
+    }
 }
 @media screen and (max-width: 840px){
     .big{
