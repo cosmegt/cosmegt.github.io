@@ -13,7 +13,7 @@ function ready(callback){
 ready(function(){
 	// menu won't work for now...
 	// document.getElementById("open").addEventListener("click", openMenu, false);
-	// openHome();
+	openHome();
 
 });
 
