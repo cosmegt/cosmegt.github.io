@@ -11,8 +11,9 @@ function ready(callback){
 
 // Start
 ready(function(){
-	document.getElementById("open").addEventListener("click", openMenu, false);
-	openHome();
+	// menu won't work for now...
+	// document.getElementById("open").addEventListener("click", openMenu, false);
+	// openHome();
 
 });
 
